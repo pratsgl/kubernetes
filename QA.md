@@ -8,4 +8,4 @@ Lets take example you mentioned in question, why kube-dns is deployment and kube
 
 The reason behind that is kube-proxy is needed on every node in cluster to run IP tables so that every node can access every pod no matter on which node it resides. Hence, when we make kube-proxy a daemonset and another node is added to cluster at later time ``` kube-proxy ``` is automatically spawned on that node.
 
-Kube-dns responsibility is to discover the service IP using its name and even one replica of ``` kube-dns ``` is enough to resolve the service name to its IP and hence we make ``` kube-dns ``` a deployment because we don't need kube-dns on every node.
+Kube-dns responsibility is to discover the service IP using its name and even one replica of ``` kube-dns ``` is enough to resolve the service name to its IP and hence we make ``` kube-dns ``` a deployment because we don't need ```kube-dns``` on every node.
